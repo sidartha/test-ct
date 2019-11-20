@@ -1,4 +1,8 @@
-self.importScripts('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/abcdefghijklmnopqrstuvwxyz1234567890/exec'
 
