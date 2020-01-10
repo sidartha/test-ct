@@ -18,23 +18,21 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
 		 s.parentNode.insertBefore(wzrk, s);
   })();
 	    
-	    clevertap.notifications.push({
-    "titleText":'Would you like to receive Push Notifications?',
-    "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
-    "okButtonText":'Sign me up!',
-    "rejectButtonText":'No thanks',
-    "okButtonColor":'#f28046'
-	    
-	    var okCallback = function ()
+	clevertap.notifications.push({
+"titleText":"Do you want to subscribe to web push?",
+"bodyText":"Get updates",
+"rejectButtonText":'No',
+"okButtonText":'Yes',
+"okCallback":function ()
 { console.log("user clicked on ok on popup"); }
 ,
-var rejectCallback =function ()
+"rejectCallback":function ()
 { console.log("user clicked on reject on popup"); }
 ,
-var subscriptionCallback=function ()
+"subscriptionCallback":function ()
 { console.log("user subscribed for web push notifications"); }
 ,
-var httpsPopupPath = "<URL of your https subdomain page>",
+"httpsPopupPath":"<URL of your https subdomain page>",
 "httpsIframePath":"<URL of your https subdomain page>/iframe.html"
 });
 </script>
