@@ -2,6 +2,7 @@
 
 <head>
     <title>Unsubscribe from email</title>
+    <script src="ads.js"></script>
 
     <!-- your WizRocket JS embed code goes here -->
 
@@ -23,7 +24,12 @@
 </head>
 
 <body>
-
+ <script>
+      if( window.canRunAds === undefined ){
+        // adblocker detected, show fallback
+        alert("Please turn off your AdBlocker and Refresh the page to unsubcribe successfully");
+      }
+    </script>
 
     <div>
         <h4>I want to unsubscribe from future emails</h4>
