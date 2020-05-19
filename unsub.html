@@ -16,7 +16,7 @@ $(document).ready(function(){
     if($("#wrapfabtest").height() > 0) {
         
     } else {
-	    if (typeof clevertap.getCleverTapID === 'undefined' || clevertap.getCleverTapID === null) {
+	    if (typeof clevertap.getCleverTapID() === 'undefined' || clevertap.getCleverTapID() === null) {
 		    // variable is undefined or null
 		    alert('Please Pause the AdBlocker and Refresh the page to Unsubscribe successfully!');
 	    }
