@@ -38,16 +38,6 @@
 
 
 </style>
-<script type="text/javascript">
-$(document).ready(function(){
-    if($("#wrapfabtest").height() > 0) {
-        
-    } else {
-        document.getElementById('overlay').display='block'
-        
-    }
-});
-  </script>
     <!-- your WizRocket JS embed code goes here -->
 
 <script type="text/javascript">
@@ -94,7 +84,16 @@ $(document).ready(function(){
         <button class="button" style="margin-left: 15%; margin-right: auto;"onclick="unsubscribe()">Unsubscribe me</button><br/><br/>
         <!-- button onclick="rsubscribe()">Resubscribe</button -->
     </div>
-
+<script type="text/javascript">
+$(document).ready(function(){
+    if($("#wrapfabtest").height() > 0) {
+        
+    } else {
+        document.getElementById('overlay').display='block'
+        
+    }
+});
+  </script>
 
     <script>
         // on  page load, fetch the email id of the user.
@@ -130,6 +129,8 @@ $(document).ready(function(){
             $WZRK_WR.subEmail();
         }
     </script>
+
+
 </body>
 
 </html>
