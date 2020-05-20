@@ -2,28 +2,32 @@
 
 <head>
     <title>Unsubscribe from email</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style>
-	.adBanner {
+.adBanner {
     background-color: transparent;
     height: 1px;
     width: 1px;
 }
+.button{
+  background-color: #4CAF50; /* Green */ color: white;padding: 15px 32px;  text-align: center; display: inline-block; font-size: 16px; margin-left: 15%; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)}
+
+
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
     if($("#wrapfabtest").height() > 0) {
         
     } else {
-	    if (typeof clevertap.getCleverTapID() === 'undefined' || clevertap.getCleverTapID() === null) {
-		    // variable is undefined or null
-		    alert('Please Pause the AdBlocker and Refresh the page to Unsubscribe successfully!');
-	    }
+      if (typeof clevertap.getCleverTapID() === 'undefined' || clevertap.getCleverTapID() === null) {
+        // variable is undefined or null
+        alert('Please Pause the AdBlocker and Refresh the page to Unsubscribe successfully!');
+      }
         
     }
 });
-	</script>
+  </script>
     <!-- your WizRocket JS embed code goes here -->
 
 <script type="text/javascript">
@@ -31,33 +35,33 @@ $(document).ready(function(){
  // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
  clevertap.account.push({"id": "W44-Z4K-K65Z"});
  (function () {
-		 var wzrk = document.createElement('script');
-		 wzrk.type = 'text/javascript';
-		 wzrk.async = true;
-		 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
-		 var s = document.getElementsByTagName('script')[0];
-		 s.parentNode.insertBefore(wzrk, s);
+     var wzrk = document.createElement('script');
+     wzrk.type = 'text/javascript';
+     wzrk.async = true;
+     wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+     var s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(wzrk, s);
   })();
 </script>
 
 
 </head>
 
-<body>
+<body style="background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);">
 <div id="wrapfabtest">
     <div class="adBanner">
     </div>
 </div>
-	
-<h1 id="JSDiv" style="text-align: center; color: red">Please Turn Off the AdBlocker to Unsubscribe Successfully!</h1>
+  
+<h1 id="JSDiv" style="text-align: center; color: red">Please Enable JavaScript and refresh the page to Unsubscribe Successfully!</h1>
 <script>document.getElementById('JSDiv').style.display = "none";</script>
 
-    <div style="position: absolute; text-align:center">
-        <h4>I want to unsubscribe from future emails</h4>
-        <input type="text" id="email" readonly="readonly" />
+    <div style="margin-left: 40%; margin-top: 20%; margin-right: 40%;padding:10px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); background: linear-gradient(180deg, #e6ffe6 0%, #fff 51%, #e6ffe6 85%);">
+        <h4 style="text-align: center;">I want to unsubscribe from future emails</h4>
+        <input type="text" id="email" readonly="readonly" style="width: 100%" />
         <br/><br/>
-        <button onclick="unsubscribe()">Unsubscribe me</button><br/><br/>
-        <!-- button onclick="resubscribe()">Resubscribe</button -->
+        <button class="button" onclick="unsubscribe()">Unsubscribe me</button><br/><br/>
+        <!-- button onclick="rsubscribe()">Resubscribe</button -->
     </div>
 
 
