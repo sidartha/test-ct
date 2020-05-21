@@ -12,13 +12,11 @@
     width: 1px;
 }
 .button{
-  background-color: #4CAF50; /* Green */ color: white;padding: 15px 32px;  text-align: center; display: inline-block; font-size: 16px;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); display: block;
+  background-color: #4CAF50; /* Green */ color: white;padding: 15px 32px;  text-align: center; display: inline-block; font-size: 16px;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); display: block;justify-content: center;
     
     margin: 10px auto 0px auto;
 }
-.overlay{
-  position: absolute;
-  top: 0;
+.overlay{top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -27,13 +25,17 @@
 }
 .popup{
    display: inline-block;
-   margin-left: 25%;
+   justify-content: center;
    margin-top: 10%; 
    width: 50%;
    height:50%;
+   transform: translateX(50%);
    background-color: white;
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
 
+}
+.unsubbox{
+  margin-top: 20%; width: 30%; position: relative;transform: translateX(110%);display: flex;flex-direction: column;justify-content: center;align-items: center;text-align: center;padding:10px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); background: linear-gradient(180deg, #e6ffe6 0%, #fff 51%, #e6ffe6 85%);
 }
 
 
@@ -77,11 +79,11 @@
 <script>document.getElementById('overlay').style.display = "none";</script>
 </div>
 
-    <div style="margin-left: 40%; margin-top: 20%; margin-right: 40%;padding:10px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); background: linear-gradient(180deg, #e6ffe6 0%, #fff 51%, #e6ffe6 85%);">
+    <div class="unsubbox">
         <h4 style="text-align: center;">I want to unsubscribe from future emails</h4>
         <input type="text" id="email" readonly="readonly" style="width: 100%" />
         <br/><br/>
-        <button class="button" style="margin-left: 15%; margin-right: auto;"onclick="unsubscribe()">Unsubscribe me</button><br/><br/>
+        <button class="button" style="position: relative;transform: translateX(0.5%);"onclick="unsubscribe()">Unsubscribe me</button><br/><br/>
         <!-- button onclick="rsubscribe()">Resubscribe</button -->
     </div>
 <script type="text/javascript">
@@ -89,7 +91,7 @@ $(document).ready(function(){
     if($("#wrapfabtest").height() > 0) {
         
     } else {
-        document.getElementById('overlay').display='block'
+        document.getElementById('overlay').style.display = "block";
         
     }
 });
