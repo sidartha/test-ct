@@ -4,6 +4,14 @@
     <title>Unsubscribe from email</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
+window.onload = checkInternetConnection;
+function checkInternetConnection() {
+  var isOnLine = navigator.onLine;
+   if (isOnLine) {
+   } else {
+     alert("Internet connection is lost!");
+   }
+}
 </script>
 
 <style>
