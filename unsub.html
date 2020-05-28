@@ -151,8 +151,12 @@ $(document).ready(function(){
         // call this function to unsubscribe the user
         function unsubscribe() {
             $WZRK_WR.unSubEmail();
-            alert("Unsubscribed successfully!");
-            checkInternetConnection()
+            checkInternetConnection();
+            
+            if (isOnLine) {
+                alert("Unsubscribed successfully!");
+            } 
+            
 
         }
 
