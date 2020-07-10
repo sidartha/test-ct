@@ -2,6 +2,7 @@
   <head>
     <title>
     </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
      var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
@@ -34,12 +35,18 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
   </body>
 <script>
 		//Add test js below:	
-function noclick() {
-if(document.getElementById('wzrk-cancel').onclick == true){
-alert("button was clicked");
+	
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
 }
-};
-document.getElementById('wzrk-cancel').onload = noclick();
+
+wait(200);
+
+document.getElementById('wzrk-cancel').onclick = function {alert("button was clicked")};
 
 	  </script>
 </html>
