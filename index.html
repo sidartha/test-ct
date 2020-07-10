@@ -34,7 +34,13 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
   </body>
 <script>
 		//Add test js below:
-		document.getElementById('wzrk-cancel').onclick = function() {alert("button was clicked")};
+	document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    // document ready
+	  document.getElementById('wzrk-cancel').onclick = function() {alert("button was clicked")};
+
+  }
+};
 
 	  </script>
 </html>
