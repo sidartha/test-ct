@@ -23,11 +23,12 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
 "bodyText":"Get updates",
 "rejectButtonText":'No',
 "okButtonText":'Yes'});
-document.getElementById('wzrk-cancel').onclick = function() {alert("button was clicked");};
 </script>
 	<script>
 		//Add test js below:
-		//document.getElementById('wzrk-cancel').onclick = function() {alert("button was clicked");};
+		document.addEventListener('DOMContentLoaded', noclick() {
+		document.getElementById('wzrk-cancel').onclick = function() {alert("button was clicked");};
+		}
 
 	  </script>
 	  
