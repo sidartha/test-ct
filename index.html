@@ -33,14 +33,13 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
 	  <div class="tenor-gif-embed" data-postid="15006966" data-share-method="host" data-width="100%" data-aspect-ratio="1.3351206434316354"><a href="https://tenor.com/view/pica-pica-funny-cute-pokemon-pikachu-gif-15006966">Pica Pica Funny GIF</a> from <a href="https://tenor.com/search/picapica-gifs">Picapica GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
   </body>
 <script>
-		//Add test js below:
-	document.onreadystatechange = () => {
-  if (document.readyState === 'complete') {
-    // document ready
-	  document.getElementById('wzrk-cancel').onclick = function() {alert("button was clicked")};
-
-  }
+		//Add test js below:	
+function noclick() {
+if document.getElementById('wzrk-cancel').onclick == True{
+alert("button was clicked");
+}
 };
+document.getElementById('wzrk-cancel').onload = noclick();
 
 	  </script>
 </html>
