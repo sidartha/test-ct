@@ -2,6 +2,19 @@
   <head>
     <title>
     </title>
+	  <style>
+		  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+	  </style>
+	  <button class="button" style="align:center">Button</button>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
@@ -20,10 +33,21 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
   })();
 	    
 	clevertap.notifications.push({
-"titleText":"Do you want to subscribe to web push?",
-"bodyText":"Get updates",
-"rejectButtonText":'No',
-"okButtonText":'Yes'});
+		"titleText":"Do you want to subscribe to web push?",
+		"bodyText":"Get updates",
+		"rejectButtonText":'No',
+		"okButtonText":'Yes'});
+	    
+	function askforpush(){
+	    
+		    clevertap.notifications.push({
+			 "titleText":'Would you like to receive Push Notifications?',
+			  "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+			  "okButtonText":'Sign me up!',
+			  "rejectButtonText":'No thanks',
+			  "askAgainTimeInSeconds”:5,
+			  "okButtonColor":'#f28046'});
+	 }
 </script>
 	
 	  
@@ -31,6 +55,8 @@ clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agree
 
   </head>
   <body>
+	  <button class="button" onclick="myFunction()>Ask for Push</button>
+
 	  <div class="tenor-gif-embed" data-postid="15006966" data-share-method="host" data-width="100%" data-aspect-ratio="1.3351206434316354"><a href="https://tenor.com/view/pica-pica-funny-cute-pokemon-pikachu-gif-15006966">Pica Pica Funny GIF</a> from <a href="https://tenor.com/search/picapica-gifs">Picapica GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
   </body>
 <script defer>
