@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>
+    </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+ // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+clevertap.account.push({"id": "W44-Z4K-K65Z"});
+clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agrees to share their IP data
+ (function () {
+		 var wzrk = document.createElement('script');
+		 wzrk.type = 'text/javascript';
+		 wzrk.async = true;
+		 wzrk.src = 'https://yashkantharia.github.io/Test-CT/a.js';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wzrk, s);
+  })();
+	    
+	clevertap.notifications.push({
+		"titleText":"Do you want to subscribe to web push?",
+		"bodyText":"Get updates",
+		"rejectButtonText":'No',
+		"okButtonText":'Yes'});
+    
+    
+    clevertap.notificationCallback = function(msg){
+      //raise the notification viewed and clicked events in the callback
+      clevertap.raiseNotificationViewed();
+      console.log(JSON.stringify(msg));//your custom rendering implementation here
+      var $button = jQuery("<button></button>");//element on whose click you want to raise the notification clicked event
+      $button.click(function(){
+         clevertap.raiseNotificationClicked();
+      });
+};
+	    
+</script>
+	  
+	  
+
+  </head>
+  <body>
+
+<img src="https://i.pinimg.com/originals/bd/68/7b/bd687b4c91c8115336effd10587538e5.jpg" style=" height:auto; width:100%;"/>   </body>
+</html>
